@@ -40,6 +40,16 @@
             flex-direction: column;
             align-items: center;
         }
+        .section:nth-child(2) {
+            margin-bottom: 20px;
+        }
+        .section:nth-child(3) {
+            margin-top: 20px;
+        }
+        .section:nth-child(2) .content, .section:nth-child(3) .content {
+            padding: 20px 0;
+            text-align: center;
+        }
         h1 {
             font-family: 'Roboto Slab', serif;
             font-size: 2.5em;
@@ -127,7 +137,6 @@
         .social-icons a:hover {
             background-color: #3498db;
         }
-        /* Media queries for larger screens */
         @media (min-width: 768px) {
             .section:nth-child(2), .section:nth-child(3) {
                 flex-direction: row;
@@ -154,6 +163,43 @@
             }
             p {
                 font-size: 1.2em;
+            }
+        }
+        @media (max-width: 768px) {
+            .instagram-flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .instagram-wrapper {
+                width: 100%;
+                padding-bottom: 100%;
+            }
+        }
+        @media (min-width: 769px) {
+            .instagram-flex-container {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .instagram-wrapper {
+                width: 48%;
+                padding-bottom: 48%;
+            }
+        }
+        .instagram-post-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .instagram-media {
+            width: 100%;
+            min-height: 600px;
+        }
+        @media (min-width: 769px) {
+            .instagram-post-container {
+                max-width: 500px;
+            }
+            .instagram-media {
+                min-height: 500px;
             }
         }
     </style>
@@ -193,23 +239,34 @@
         <i class="fas fa-times close-btn" onclick="closeMoreInfo()"></i>
         <h1>¿Quién es César Solís?</h1>
         <h2>Un poquito de vida escolar</h2>
-        <p>Un poquito de vida escolar...</p>
-        <!-- Posteos de Instagram usando blockquote -->
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CNvN5FbMWcs/" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-        </blockquote>
-        <script async src="//www.instagram.com/embed.js"></script>
-
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cl4y39XM3Et/" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-        </blockquote>
-        <script async src="//www.instagram.com/embed.js"></script>
-
+        <p>Un poquito de vida escolar
+Nací en Arequipa, Perú, en 2002, justo una década después de que nuestro país regresara a la senda del crecimiento. No obstante, luego de 6 meses, me mudé con mis padres y mi abuelita a Pucallpa, quien me cuidó desde muy pequeño y me transmitió desde valores hasta el primer acercamiento a un sentido del humor muy hilarante. 
+Desde temprana edad, mis padres me inculcaron dos características valiosas: un profundo respeto hacia el prójimo, y la gran importancia de una mente curiosa y cuestionadora. Estas lecciones me animaron a perseguir la excelencia académica, participar en concursos y olimpiadas matemáticas escolares locales y nacionales, y obtener reconocimientos.
+En el segundo año de secundaria conocí a Claudio Jara, profesor de matemáticas de mi colegio e ingeniero estadístico por la Universidad Nacional de Ingeniería (UNI) ¿Lo curioso? Él únicamente nos entregaba ejercicios y nos animaba a resolverlos en conjunto, y si teníamos alguna duda simplemente le preguntábamos. Él creía que ya éramos capaces de analizar situaciones complejas y plasmarlas al papel, simplemente necesitábamos realmente intentarlo. Su gran pasión por otros campos como la física o la historia me convenció de que una persona necesita desarrollarse de forma integral y no encasillarse en un mismo ámbito.
+Este impacto me animó a explorar diversas disciplinas por mi cuenta como la física, la poesía o la música. De hecho, junto con unos amigos creé “Hilo Azul”, una banda que ejecutaba covers de clásicos de rock y pop (aprovecho para agradecer a Luis, Chris, Ronal y Bryan por esos tiempos).
+Estudie toda mi etapa escolar en el mismo colegio. Durante esta pude obtener diversas oportunidades como becas. Así, uno de los grandes motivos que me animó a elegir la carrera de Economía fue poder lograr que las personas puedan acceder a oportunidades justas, porque creo mi situación influyó en las oportunidades que pude tener y no únicamente mi esfuerzo ¿Mi mayor deseo? Ser líder en proyectos educativos, tecnológicos y de infraestructura que; además de impactar en las regiones del Perú y el Mundo, puedan enterarse de lo que está sucediendo respecto de esto en todo el planeta.
+</p>
         <h2>Vida universitaria y docente</h2>
-        <p>Posteriormente, me adentré a la vida universitaria...</p>
+        <p>Posteriormente, me adentré a la vida universitaria con muchos retos. Aquellos que, con mucha dedicación y la ayuda de todas las personas quienes me acompañaron en el proceso, pude aprender a abordarlos correctamente. Dentro de las experiencia vividas que destaco están el recibir el Premio Especial al Mejor Alumno de Primer Año (MAES); poder formar parte de la organización universitaria ECAI, donde se ayuda a nuevos ingresantes a adentrarse a la vida universitaria; y haber enseñado inglés en colegios a través de la Organización Hacedores de Diálogo
+De la misma manera, pude adentrarme al mundo académico a través del modelo de Jefes de Práctica de la Universidad del Pacífico. De modo que he podido enseñar Economía General I y Matemáticas III; y que actualmente dicto los cursos de Contabilidad Intermedia y Evaluación Privada de Proyectos. Donde en cada nueva clase puedo
+</p>
+        <div class="instagram-post-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CNvN5FbMWcs/" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+        </div>
+        <div class="instagram-post-container">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cl4y39XM3Et/" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+        </div>
         <h2>Ámbito profesional</h2>
-        <p>Luego, en el lado profesional...</p>
+        <p>Luego, en el lado profesional, pude comenzar a practicar a partir del sexto ciclo. Así, comencé a trabajar en el área de Data Analytics en una Fintech llamada Baldecash, la cual se encarga actualmente de entregar financiamiento a estudiantes (principalmente que no puedan acceder a un préstamo formal) a través de laptops, y así puedan ejercer sus estudios adecuadamente.
+Posteriormente, me adentré al trabajo de investigación gracias a la confianza que me tuvo la profesora Joanna Kámiche. Y así empecé como su asistente de investigación en el Centro de Investigación de la Universidad del Pacífico. Allí, junto con ella colaboré en una investigación sobre el impacto que tuvo un programa de capacitación “Haku Wiñay” sobre el ingreso de agricultores y ganaderos. Asimismo, colaboré con la realización de un artículo que buscaba evaluar si la realización de los Juegos Panamericanos en Lima fue adecuada respecto de los problemas que estaban sucediendo en el Norte del Perú.
+Seguidamente, me adentré al mundo de la finanzas a través de OM Pharma, una compañía biofarmacéutica global, donde me encuentro en el área de ventas realizando planeamiento financiero. Y aquí es donde me encuentro actualmente, lo que me parece divertido porque veo muchos medicamentos, ¡igual que mis padres quienes laboran en el área de la salud!
+</p>
     </div>
 </body>
 </html>
+
 
 
 
