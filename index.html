@@ -77,11 +77,18 @@
             font-weight: bold;
             cursor: pointer;
         }
-        .instagram-media {
-    width: 80%; /* Ajusta el ancho según lo necesites */
-    max-width: 500px; /* Establece un ancho máximo si lo deseas */
-    margin: 20px auto; /* Centra el posteo y agrega un margen superior e inferior */
-    overflow: hidden; /* Esto puede ayudar si hay algún desbordamiento inesperado */
+      .instagram-media {
+    width: 100%; 
+    max-width: 600px; 
+    margin: 20px auto; 
+    overflow: visible; 
+}
+
+.instagram-media iframe {
+    width: 100%;
+    height: auto;
+    border: none;
+    overflow: visible;
 }
         .modal {
             position: fixed;
