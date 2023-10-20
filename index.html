@@ -77,19 +77,22 @@
             font-weight: bold;
             cursor: pointer;
         }
-      .instagram-media {
+ /* Estilo para los posteos incrustados de Instagram */
+.instagram-media {
     width: 100%; 
     max-width: 600px; 
-    margin: 20px auto; 
+    margin: 40px auto;  /* Aumenta el margen para dar más espacio entre posteos */
     overflow: visible; 
+    display: block;     /* Asegura que cada posteo se muestre en una nueva línea */
 }
 
 .instagram-media iframe {
     width: 100%;
-    height: auto;
+    min-height: 650px;  /* Ajusta la altura mínima para dar suficiente espacio */
     border: none;
     overflow: visible;
 }
+
         .modal {
             position: fixed;
             top: 0;
