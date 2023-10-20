@@ -32,7 +32,7 @@
             text-align: center;
             padding: 20px;
         }
-         .section:first-child {
+        .section:first-child {
             background-color: #014aac;
         }
         .section:nth-child(2), .section:nth-child(3) {
@@ -202,6 +202,28 @@
                 min-height: 500px;
             }
         }
+        /* Estilo para la imagen y el contenedor de la segunda sección */
+        .section:nth-child(2) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .section:nth-child(2) .content {
+            flex: 1;
+            max-width: 50%;
+        }
+        .section:nth-child(2) .image-container {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section:nth-child(2) .image-container img {
+            max-width: 90%;
+            height: auto;
+        }
     </style>
     <script>
         function showMoreInfo() {
@@ -227,6 +249,10 @@
             <h2>Subtítulo del Producto</h2>
             <p>Información adicional o detalles sobre el producto. Puedes expandir más sobre sus características, beneficios o cualquier otro detalle relevante.</p>
             <a onclick="showMoreInfo()" class="more-link">Leer más</a>
+        </div>
+        <div class="image-container">
+            <!-- Añade la URL de tu imagen en el atributo src -->
+            <img src="URL_DE_TU_IMAGEN" alt="Descripción de la imagen">
         </div>
     </div>
     <div class="section">
@@ -266,7 +292,6 @@ Seguidamente, me adentré al mundo de la finanzas a través de OM Pharma, una co
     </div>
 </body>
 </html>
-
 
 
 
