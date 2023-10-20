@@ -141,16 +141,16 @@
             .section:nth-child(2), .section:nth-child(3) {
                 flex-direction: row;
             }
-            .section:nth-child(2) {
-                flex-direction: row-reverse;
+            .section:nth-child(2) .content {
+                order: 1;
             }
-            .section:nth-child(2) .content, .section:nth-child(3) .content {
-                padding: 0;
-                text-align: left;
+            .section:nth-child(2) .image-container {
+                order: 2;
+                max-width: 50%;
+                margin-left: 20px;
             }
             .section:nth-child(2) img {
-                max-width: 50%;
-                margin-top: 0;
+                width: 100%;
             }
             h1 {
                 font-size: 4.5em;
@@ -201,28 +201,6 @@
             .instagram-media {
                 min-height: 500px;
             }
-        }
-        /* Estilo para la imagen y el contenedor de la segunda sección */
-        .section:nth-child(2) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .section:nth-child(2) .content {
-            flex: 1;
-            max-width: 50%;
-        }
-        .section:nth-child(2) .image-container {
-            flex: 1;
-            max-width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .section:nth-child(2) .image-container img {
-            max-width: 90%;
-            height: auto;
         }
     </style>
     <script>
@@ -292,6 +270,7 @@ Seguidamente, me adentré al mundo de la finanzas a través de OM Pharma, una co
     </div>
 </body>
 </html>
+
 
 
 
