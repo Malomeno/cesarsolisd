@@ -159,10 +159,6 @@
           #subseccion2 .content p {
             text-align: justify; /* Justificamos el texto de la segunda subsección */
         }
-         @media (min-width: 768px) {
-            #subseccion2 {
-                flex-direction: row;
-            }
     </style>
     <script>
         function showMoreInfo() {
@@ -171,11 +167,17 @@
         function closeMoreInfo() {
             document.querySelector('.modal').style.display = 'none';
         }
+
         function scrollToSection(id) {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
+            setTimeout(() => {
+                document.getElementById(id).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 500);
         }
     </script>
 </head>
