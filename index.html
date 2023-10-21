@@ -159,6 +159,17 @@
         function closeMoreInfo() {
             document.querySelector('.modal').style.display = 'none';
         }
+        function scrollToSection(id) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            setTimeout(() => {
+                document.getElementById(id).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 500);
+        }
     </script>
 </head>
 <body>
