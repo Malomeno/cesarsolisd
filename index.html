@@ -241,16 +241,27 @@
                 margin-left: 20px;
             }
         }
+        /* Ajustes para el modal */
+    .modal {
+        overflow-y: scroll; /* Habilita el scroll solo cuando es necesario */
+        -webkit-overflow-scrolling: touch; /* Mejora el scroll en dispositivos táctiles */
+    }
+
+    body.modal-open {
+        overflow: hidden; /* Deshabilita el scroll del body cuando el modal está abierto */
+    }
     </style>
     <script>
-        function showMoreInfo() {
-            document.querySelector('.modal').style.display = 'flex';
-        }
+    function showMoreInfo() {
+        document.querySelector('.modal').style.display = 'flex';
+        document.body.classList.add('modal-open'); // Agrega una clase al body cuando el modal está abierto
+    }
 
-        function closeMoreInfo() {
-            document.querySelector('.modal').style.display = 'none';
-        }
-    </script>
+    function closeMoreInfo() {
+        document.querySelector('.modal').style.display = 'none';
+        document.body.classList.remove('modal-open'); // Elimina la clase del body cuando el modal está cerrado
+    }
+</script>
 </head>
 
 <body>
