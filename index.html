@@ -250,6 +250,17 @@
     body.modal-open {
         overflow: hidden; /* Deshabilita el scroll del body cuando el modal está abierto */
     }
+        .modal {
+        top: 0;
+        bottom: 0; /* Asegura que el modal ocupe toda la altura de la pantalla */
+        max-height: 100vh; /* Establece la altura máxima del modal al 100% de la altura de la ventana */
+        overflow-y: scroll; /* Habilita el scroll solo cuando es necesario */
+        -webkit-overflow-scrolling: touch; /* Mejora el scroll en dispositivos táctiles */
+    }
+
+    body.modal-open {
+        overflow: hidden; /* Deshabilita el scroll del body cuando el modal está abierto */
+    }
     </style>
     <script>
     function showMoreInfo() {
