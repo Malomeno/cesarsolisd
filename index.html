@@ -207,6 +207,40 @@
             flex: 1;
             padding-left: 20px;
         }
+        /* Estilos para la imagen y el contenido de la segunda subsección */
+        .section:nth-child(2) {
+            display: flex;
+            flex-direction: column-reverse; /* En móviles, la imagen se mostrará arriba */
+            align-items: center;
+        }
+
+        .section:nth-child(2) .content {
+            order: 2;
+        }
+
+        .section:nth-child(2) img {
+            order: 1;
+            width: 100%;
+            max-width: 400px; /* Puedes ajustar este valor según lo necesites */
+            margin-bottom: 20px; /* Espacio entre la imagen y el texto en móviles */
+        }
+
+        @media (min-width: 768px) {
+            .section:nth-child(2) {
+                flex-direction: row;
+            }
+
+            .section:nth-child(2) .content {
+                order: 1;
+                padding-right: 20px;
+            }
+
+            .section:nth-child(2) img {
+                order: 2;
+                margin-bottom: 0;
+                margin-left: 20px;
+            }
+        }
     </style>
     <script>
         function showMoreInfo() {
@@ -235,10 +269,8 @@
             <p>Información adicional o detalles sobre el producto. Puedes expandir más sobre sus características, beneficios o cualquier otro detalle relevante.</p>
             <a onclick="showMoreInfo()" class="more-link">Leer más</a>
         </div>
-        <!-- Imagen a la derecha -->
-        <div class="image-right-container">
-            <img src="https://raw.githubusercontent.com/Malomeno/cesarsolisd/main/usar.jpg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
-        </div>
+        <!-- Imagen a la derecha en PC y arriba en móviles -->
+        <img src="https://raw.githubusercontent.com/Malomeno/cesarsolisd/main/usar.jpg" alt="Descripción de la imagen">
     </div>
     <div class="section">
         <div class="content">
